@@ -1,0 +1,16 @@
+---
+packages:
+  CentOS:
+    "9":
+      - qemu-kvm 
+      - libvirt 
+      - virt-install 
+      - bridge-utils
+      - cockpit 
+      - cockpit-networkmanager 
+      - cockpit-dashboard 
+      - cockpit-storaged 
+      - cockpit-packagekit 
+      - cockpit-docker 
+      - cockpit-machines 
+      - cockpit-selinux

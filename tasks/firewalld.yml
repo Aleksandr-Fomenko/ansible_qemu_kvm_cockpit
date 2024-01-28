@@ -1,0 +1,13 @@
+---
+- name: Systemd enable cockpit.socket
+  systemd_service:
+    name: cockpit.socket
+    state: started
+    enabled: true
+
+- name: Add service cockpit
+  firewalld:
+    service: cockpit
+    permanent: true
+    immediate: true
+    state: enabled

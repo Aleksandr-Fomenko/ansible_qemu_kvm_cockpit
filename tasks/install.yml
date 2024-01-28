@@ -1,0 +1,10 @@
+---
+- name: Update {{ ansible_distribution }} hosts
+  yum:
+    update_cache: true
+    update_only: true
+
+- name: Install packages
+  package:
+    name: "{{ item }}"
+  with_items: "{{ packages[ansible_distribution][ansible_distribution_major_version] }}"
